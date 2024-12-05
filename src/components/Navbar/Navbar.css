@@ -1,0 +1,46 @@
+.header__navbar {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: var(--color-orange-brown);
+  position: relative;
+}
+
+.header__logo {
+  height: 93%;
+  /* border: 1px solid yellow; */
+  position: absolute;
+  left: 60px;
+}
+
+.header__title {
+  font-family: var(--font-family-cabin-sketch);
+  font-size: 2.8rem;
+  color: white;
+}
+
+.header__navbar-options {
+  display: flex;
+  height: 45px;
+  background-color: black;
+}
+
+.header__option {
+  flex-grow: 1;
+  text-align: center;
+  align-content: center;
+  font-family: var(--font-family-cabin-sketch);
+  font-size: 1.3rem;
+}
+
+.header__option a {
+  color: white;
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@ import cevicheHome from "../assets/images/ceviche-home.png";
 import juaneHome from "../assets/images/juane-home.png";
 import pachamancaHome from "../assets/images/pachamanca-home.png";
 
-export const homeRegionData = [
+export const HOME_REGION_DATA = [
   {
     title: "COSTA",
     paragraph:

@@ -3,11 +3,13 @@ import miskito from "../../assets/images/miskito.png";
 import { useEffect, useState } from "react";
 import { GoTriangleLeft } from "react-icons/go";
 import { GoTriangleRight } from "react-icons/go";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { REGIONS } from "../../pages/RegionSection/utils/constants";
 
 export const HomeRegion = ({ homeRegionData }) => {
   const [showTextMiskito, setShowTextMiskito] = useState(false);
   const [index, setIndex] = useState(0);
+  const navigate = useNavigate();
 
   const nextPlate = () => {
     setIndex((prev) => (prev === homeRegionData.length - 1 ? 0 : prev + 1));
@@ -15,6 +17,18 @@ export const HomeRegion = ({ homeRegionData }) => {
 
   const previousPlate = () => {
     setIndex((prev) => (prev === 0 ? homeRegionData.length - 1 : prev - 1));
+  };
+
+  const goToRegionSection = (name) => {
+    const departmentsKeys = Object.keys(REGIONS[name].DEPARTMENTS);
+    const departmentData = departmentsKeys.map((departmentKey) => ({
+      name: REGIONS[name].DEPARTMENTS[departmentKey].NAME,
+      image: REGIONS[name].DEPARTMENTS[departmentKey].IMAGE,
+    }));
+
+    navigate("/region", {
+      state: { regionName: name, regionDepartments: departmentData },
+    });
   };
 
   useEffect(() => {
@@ -32,7 +46,12 @@ export const HomeRegion = ({ homeRegionData }) => {
         <p className="home-region__paragraph">
           {homeRegionData[index].paragraph}
         </p>
-        <Link className="home-region__button">CONOCE MÁS</Link>
+        <button
+          className="home-region__button"
+          onClick={() => goToRegionSection(homeRegionData[index].title)}
+        >
+          CONOCE MÁS
+        </button>
       </div>
       <div className="home-region__image-box">
         <img

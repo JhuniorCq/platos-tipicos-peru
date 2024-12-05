@@ -15,15 +15,17 @@
 
 .header__logo {
   height: 93%;
-  /* border: 1px solid yellow; */
   position: absolute;
   left: 60px;
+  cursor: pointer;
 }
 
 .header__title {
   font-family: var(--font-family-cabin-sketch);
   font-size: 2.8rem;
   color: white;
+  user-select: none;
+  cursor: pointer;
 }
 
 .header__navbar-options {
@@ -36,11 +38,13 @@
   flex-grow: 1;
   text-align: center;
   align-content: center;
-  font-family: var(--font-family-cabin-sketch);
-  font-size: 1.3rem;
 }
 
-.header__option a {
+.header__option button {
   color: white;
   cursor: pointer;
+  font-size: 1.3rem;
+  font-family: var(--font-family-cabin-sketch);
+  background: none;
+  border: none;
 }

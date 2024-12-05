@@ -1,7 +1,7 @@
 import { HomeRegion } from "../../components/HomeRegion/HomeRegion";
-import { homeRegionData } from "../../components/HomeRegion/utils/constants";
+import { HOME_REGION_DATA } from "../../components/HomeRegion/utils/constants";
 import "./Home.css";
 
 export const Home = () => {
-  return <HomeRegion homeRegionData={homeRegionData} />;
+  return <HomeRegion homeRegionData={HOME_REGION_DATA} />;
 };

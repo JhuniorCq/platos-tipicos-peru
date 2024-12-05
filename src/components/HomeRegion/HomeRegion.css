@@ -45,6 +45,12 @@
   border: none;
   border-radius: 5px;
   margin-top: 15px;
+  cursor: pointer;
+  transition: scale 0.3s ease-in-out;
+}
+
+.home-region__button:hover {
+  scale: 1.1;
 }
 
 .home-region__image-box {

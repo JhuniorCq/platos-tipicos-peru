@@ -1,0 +1,50 @@
+.region {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 60px 80px;
+  gap: 40px;
+}
+
+.region__title {
+  font-family: var(--font-family-fredericka-the-great);
+  font-weight: 400;
+  font-size: 4.5rem;
+}
+
+.region__departments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.region__department {
+  width: 30%;
+  position: relative;
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+}
+
+.region__department-image {
+  width: 100%;
+}
+
+.region__department-name {
+  position: absolute;
+  color: white;
+  font-family: var(--font-family-grandstander);
+  font-size: 3.2rem;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: scale 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+.region__department:hover .region__department-name {
+  scale: 1.1;
+}

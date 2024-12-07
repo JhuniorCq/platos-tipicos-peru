@@ -1,0 +1,132 @@
+.chat-miskito {
+  width: 100%;
+  height: calc(100vh - 115px);
+  /* border: 1px solid green; */
+  padding: 0 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.chat-miskito__chat-introduction {
+  border: 1px solid red;
+  padding-top: 75px;
+  width: 100%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: justify-content 0.3s ease-in-out;
+}
+
+.chat-miskito__chat-introduction--move {
+  justify-content: space-around;
+}
+
+.chat-miskito__introduction {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.chat-miskito__introduction > * {
+  border: 1px solid red;
+}
+
+.chat-miskito__paragraph {
+  width: 300px;
+  font-family: var(--font-family-cabin-sketch);
+  font-size: 1.8rem;
+  text-align: center;
+  text-shadow: var(--shadow-text-orange-brown);
+}
+
+.chat-miskito__image {
+  height: 400px;
+}
+
+.chat-miskito__chat {
+  border: 1px solid blue;
+  width: 900px;
+  max-height: 65vh;
+  overflow-y: auto;
+  position: fixed;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateX(250%);
+  transition: position 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.chat-miskito__chat--show {
+  position: static;
+  transform: translateX(0);
+}
+
+.chat-miskito__message {
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.chat-miskito__message--user {
+  background-color: var(--color-orange-brown);
+  align-self: flex-end;
+}
+
+.chat-miskito__message--miskito {
+  background-color: var(--color-pink-beige);
+  align-self: flex-start;
+}
+
+.chat-miskito__message--miskito ul,
+.chat-miskito__message--miskito ol {
+  padding-left: 40px;
+}
+
+.chat-miskito__loading-message {
+  display: none;
+}
+
+.chat-miskito__loading-message--show {
+  display: block;
+}
+
+.chat-miskito__input-box {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 30px;
+}
+
+.chat-miskito__input {
+  width: 100%;
+  position: relative;
+  height: 55px;
+  padding: 0 20px;
+  border: 2px solid var(--color-orange-brown);
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  font-family: var(--font-family-fredericka-the-great);
+}
+
+.chat-miskito__send-button {
+  display: flex;
+  position: absolute;
+  right: 25px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.chat-miskito__send-button-icon {
+  color: var(--color-orange-brown);
+  font-size: 1.5rem;
+}

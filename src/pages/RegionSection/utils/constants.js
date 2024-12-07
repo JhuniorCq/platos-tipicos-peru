@@ -1,4 +1,5 @@
 import { REGIONS_NAMES } from "../../../utils/constants";
+
 // Lugares de la Costa
 import TUMBES from "../assets/images/places/Tumbes.png";
 import PIURA from "../assets/images/places/Piura.png";
@@ -111,620 +112,687 @@ import CECINA_PLATANOS_FRITOS from "../assets/images/dishes/Amazonas Cecina Plat
 import CALDO_CARACHAMA from "../assets/images/dishes/Amazonas Caldo Carachama.png";
 import PURTUMUTE from "../assets/images/dishes/Amazonas Purtumute.png";
 
-export const REGIONS = {
-  COSTA: {
+export const REGIONS = [
+  {
+    ID: 1,
     NAME: REGIONS_NAMES.COSTA,
-    DEPARTMENTS: {
-      TUMBES: {
+    DEPARTMENTS: [
+      {
+        ID: 1,
         NAME: "TUMBES",
         IMAGE: TUMBES,
-        DISHES: {
-          CEVICHE_C_N: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CEVICHE DE CONCHAS NEGRAS",
             IMAGE: CEVICHE_CONCHAS_NEGRAS,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHILCANO_P: {
+          {
+            ID: 2,
             NAME: "CHILCANO DE PESCADO",
             IMAGE: CHILCANO_PESCADO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          MAJADO_Y: {
+          {
+            ID: 3,
             NAME: "MAJADO DE YUCA",
             IMAGE: MAJADO_YUCA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      PIURA: {
+      {
+        ID: 2,
         NAME: "PIURA",
         IMAGE: PIURA,
-        DISHES: {
-          SECO_C_F: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "SECO DE CABRITO CON FREJOLES",
             IMAGE: SECO_CABRITO_FREJOLES,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          MALARRABIA: {
+          {
+            ID: 2,
             NAME: "MALARRABIA",
             IMAGE: MALARRABIA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CEVICHE_N: {
+          {
+            ID: 3,
             NAME: "CEVICHE NORTEÑO",
             IMAGE: CEVICHE_NORTEÑO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      LAMBAYEQUE: {
+      {
+        ID: 3,
         NAME: "LAMBAYEQUE",
         IMAGE: LAMBAYEQUE,
-        DISHES: {
-          ARROZ_P: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "ARROZ CON PATO",
             IMAGE: ARROZ_PATO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          TORTILLA_R: {
+          {
+            ID: 2,
             NAME: "TORTILLA DE RAYA",
             IMAGE: TORTILLA_RAYA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHINGUIRITO: {
+          {
+            ID: 3,
             NAME: "CHINGUIRITO",
             IMAGE: CHINGUIRITO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      LA_LIBERTAD: {
+      {
+        ID: 4,
         NAME: "LA LIBERTAD",
         IMAGE: LA_LIBERTAD,
-        DISHES: {
-          SHAMBAR: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "SHÁMBAR",
             IMAGE: SHAMBAR,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          SECO_C_L: {
+          {
+            ID: 2,
             NAME: "SECO DE CABRITO CON LOCHE",
             IMAGE: SECO_CABRITO_LOCHE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          PEPIAN_P: {
+          {
+            ID: 3,
             NAME: "PEPIAN DE PAVA",
             IMAGE: PEPIAN_PAVITA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      ANCASH: {
+      {
+        ID: 5,
         NAME: "ANCASH",
         IMAGE: ANCASH,
-        DISHES: {
-          PICANTE_C: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "PICANTE DE CUY",
             IMAGE: PICANTE_CUY,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHARQUICAN: {
+          {
+            ID: 2,
             NAME: "CHARQUICAN",
             IMAGE: CHARQUICAN,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          LLUNCA_G: {
+          {
+            ID: 3,
             NAME: "LLUNCA CON GALLINA",
             IMAGE: LLUNCA_GALLINA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      CALLAO: {
+      {
+        ID: 6,
         NAME: "CALLAO",
         IMAGE: CALLAO,
-        DISHES: {
-          CEVICHE: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CEVICHE",
             IMAGE: CEVICHE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHORITOS_C: {
+          {
+            ID: 2,
             NAME: "CHORITOS A LA CHALACA",
             IMAGE: CHORITOS_CHALACA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          SUDADO_P: {
+          {
+            ID: 3,
             NAME: "SUDADO DE PESCADO",
             IMAGE: SUDADO_PESCADO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      LIMA: {
+      {
+        ID: 7,
         NAME: "LIMA",
         IMAGE: LIMA,
-        DISHES: {
-          AJI_G: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "AJÍ DE GALLINA",
             IMAGE: AJI_GALLINA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          LOMO_S: {
+          {
+            ID: 2,
             NAME: "LOMO SALTADO",
             IMAGE: LOMO_SALTADO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CAUSA_L: {
+          {
+            ID: 3,
             NAME: "CAUSA LIMEÑA",
             IMAGE: CAUSA_LIMEÑA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      ICA: {
+      {
+        ID: 8,
         NAME: "ICA",
         IMAGE: ICA,
-        DISHES: {
-          CARAPULCRA_S_S: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CARAPULCRA CON SOPA SECA",
             IMAGE: CARAPULCRA_SOPA_SECA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHAPANAS: {
+          {
+            ID: 2,
             NAME: "CHAPANAS",
             IMAGE: CHAPANAS,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          PICANTE_P: {
+          {
+            ID: 3,
             NAME: "PICANTE DE PALLARES VERDES",
             IMAGE: PICANTE_PALLARES_VERDES,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      AREQUIPA: {
+      {
+        ID: 9,
         NAME: "AREQUIPA",
         IMAGE: AREQUIPA,
-        DISHES: {
-          ROCOTO_R: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "ROCOTO RELLENO",
             IMAGE: ROCOTO_RELLENO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          OCOPA: {
-            NAME: "OCOPA",
-            IMAGE: OCOPA,
-            DESCRIPTION: "",
-            RECIPE: "",
-          },
-          ADOBO_A: {
+          { ID: 2, NAME: "OCOPA", IMAGE: OCOPA, DESCRIPTION: "", RECIPE: "" },
+          {
+            ID: 3,
             NAME: "ADOBO AREQUIPEÑO",
             IMAGE: ADOBO_AREQUIPEÑO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      MOQUEGUA: {
+      {
+        ID: 10,
         NAME: "MOQUEGUA",
         IMAGE: MOQUEGUA,
-        DISHES: {
-          PATASCA_M: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "PATASCA MOQUEGUANA",
             IMAGE: PATASCA_MOQUEGUANA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          MOQUEGUANO_C: {
+          {
+            ID: 2,
             NAME: "MOQUEGUANO DE CAMARONES",
             IMAGE: MOQUEGUANO_CAMARONES,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CUY_F: {
+          {
+            ID: 3,
             NAME: "CUY FRITO",
             IMAGE: CUY_FRITO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      TACNA: {
+      {
+        ID: 11,
         NAME: "TACNA",
         IMAGE: TACNA,
-        DISHES: {
-          PICANTE_T: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "PICANTE A LA TACNEÑA",
             IMAGE: PICANTE_TACNEÑA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          ADOBO_C: {
+          {
+            ID: 2,
             NAME: "ADOBO DE CHANCHO",
             IMAGE: ADOBO_CHANCHO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          PASTEL_CH: {
+          {
+            ID: 3,
             NAME: "PASTEL DE CHOCLO",
             IMAGE: PASTEL_CHOCLO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-    },
+    ],
   },
-  SIERRA: {
+  {
+    ID: 2,
     NAME: REGIONS_NAMES.SIERRA,
-    DEPARTMENTS: {
-      CAJAMARCA: {
+    DEPARTMENTS: [
+      {
+        ID: 1,
         NAME: "CAJAMARCA",
         IMAGE: CAJAMARCA,
-        DISHES: {
-          CUY_P: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CUY CON PAPAS",
             IMAGE: CUY_PAPAS,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CALDO_V: {
+          {
+            ID: 2,
             NAME: "CALDO VERDE",
             IMAGE: CALDO_VERDE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          HUMITAS: {
+          {
+            ID: 3,
             NAME: "HUMITAS",
             IMAGE: HUMITAS,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      HUANUCO: {
+      {
+        ID: 2,
         NAME: "HUANUCO",
         IMAGE: HUANUCO,
-        DISHES: {
-          PACHAMANCA: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "PACHAMANCA",
             IMAGE: PACHAMANCA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          LOCRO_G: {
+          {
+            ID: 2,
             NAME: "LOCRO DE GALLINA",
             IMAGE: LOCRO_GALLINA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          MAZAMORRA_C: {
+          {
+            ID: 3,
             NAME: "MAZAMORRA DE CALABAZA",
             IMAGE: MAZAMORRA_CALABAZA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      PASCO: {
+      {
+        ID: 3,
         NAME: "PASCO",
         IMAGE: PASCO,
-        DISHES: {
-          CALDO_C: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CALDO DE CORDERO",
             IMAGE: CALDO_CORDERO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          PATASCA: {
+          {
+            ID: 2,
             NAME: "PATASCA",
             IMAGE: PATASCA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHARQUI_M: {
+          {
+            ID: 3,
             NAME: "CHARQUI CON MOTE",
             IMAGE: CHARQUI_MOTE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      JUNIN: {
+      {
+        ID: 4,
         NAME: "JUNIN",
         IMAGE: JUNIN,
-        DISHES: {
-          PAPA_H: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "PAPA A LA HUANCAÍNA",
             IMAGE: PAPA_HUANCAINA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          TRUCHA_F: {
+          {
+            ID: 2,
             NAME: "TRUCHA FRITA",
             IMAGE: TRUCHA_FRITA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          MONDONGO_H: {
+          {
+            ID: 3,
             NAME: "MONDONGO HUANCAÍNO",
             IMAGE: MONDONGO_HUANCAINO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      HUANCAVELICA: {
+      {
+        ID: 5,
         NAME: "HUANCAVELICA",
         IMAGE: HUANCAVELICA,
-        DISHES: {
-          MONDONGO_H: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "MONDONGO HUANCAVELICANO",
             IMAGE: MONDONGO_HUANCAVELICANO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          TRUCHA_P: {
+          {
+            ID: 2,
             NAME: "TRUCHA A LA PARRILLA",
             IMAGE: TRUCHA_PARRILLA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CALDO_C: {
+          {
+            ID: 3,
             NAME: "CALDO DE CABEZA",
             IMAGE: CALDO_CABEZA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      AYACUCHO: {
+      {
+        ID: 6,
         NAME: "AYACUCHO",
         IMAGE: AYACUCHO,
-        DISHES: {
-          PUCA_P: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "PUCA PICANTE",
             IMAGE: PUCA_PICANTE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          QAPCHI: {
-            NAME: "QAPCHI",
-            IMAGE: QAPCHI,
-            DESCRIPTION: "",
-            RECIPE: "",
-          },
-          MONDONGO_A: {
+          { ID: 2, NAME: "QAPCHI", IMAGE: QAPCHI, DESCRIPTION: "", RECIPE: "" },
+          {
+            ID: 3,
             NAME: "MONDONGO AYACUCHANO",
             IMAGE: MONDONGO_AYACUCHANO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      APURIMAC: {
+      {
+        ID: 7,
         NAME: "APURIMAC",
         IMAGE: APURIMAC,
-        DISHES: {
-          KAPCHI_H: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "KAPCHI DE HABAS",
             IMAGE: KAPCHI_HABAS,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CUY_H: {
+          {
+            ID: 2,
             NAME: "CUY AL HORNO",
             IMAGE: CUY_HORNO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CHICHARRON_C: {
+          {
+            ID: 3,
             NAME: "CHICHARRÓN DE CERDO",
             IMAGE: CHICHARRON_CERDO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      CUSCO: {
+      {
+        ID: 8,
         NAME: "CUSCO",
         IMAGE: CUSCO,
-        DISHES: {
-          CHIRI_U: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CHIRI UCHU",
             IMAGE: CHIRI_UCHU,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          LECHON_H: {
+          {
+            ID: 2,
             NAME: "LECHÓN AL HORNO",
             IMAGE: LECHON_HORNO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          ADOBO_C: {
+          {
+            ID: 3,
             NAME: "ADOBO CUZQUEÑO",
             IMAGE: ADOBO_CUZQUEÑO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      PUNO: {
+      {
+        ID: 9,
         NAME: "PUNO",
         IMAGE: PUNO,
-        DISHES: {
-          HUATIA: {
-            NAME: "HUATIA",
-            IMAGE: HUATIA,
-            DESCRIPTION: "",
-            RECIPE: "",
-          },
-          CHAIRO: {
-            NAME: "CHAIRO",
-            IMAGE: CHAIRO,
-            DESCRIPTION: "",
-            RECIPE: "",
-          },
-          PESQUE_Q: {
+        DISHES: [
+          { ID: 1, NAME: "HUATIA", IMAGE: HUATIA, DESCRIPTION: "", RECIPE: "" },
+          { ID: 2, NAME: "CHAIRO", IMAGE: CHAIRO, DESCRIPTION: "", RECIPE: "" },
+          {
+            ID: 3,
             NAME: "PESQUE DE QUINUA",
             IMAGE: PESQUE_QUINUA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-    },
+    ],
   },
-  SELVA: {
+  {
+    ID: 3,
     NAME: REGIONS_NAMES.SELVA,
-    DEPARTMENTS: {
-      LORETO: {
+    DEPARTMENTS: [
+      {
+        ID: 1,
         NAME: "LORETO",
         IMAGE: LORETO,
-        DISHES: {
-          JUANE: {
-            NAME: "JUANE",
-            IMAGE: JUANE,
-            DESCRIPTION: "",
-            RECIPE: "",
-          },
-          PATARASHCA: {
+        DISHES: [
+          { ID: 1, NAME: "JUANE", IMAGE: JUANE, DESCRIPTION: "", RECIPE: "" },
+          {
+            ID: 2,
             NAME: "PATARASHCA",
             IMAGE: PATARASHCA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          TACACHO_C: {
+          {
+            ID: 3,
             NAME: "TACACHO CON CECINA",
             IMAGE: TACACHO_CECINA_L,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      UCAYALI: {
+      {
+        ID: 2,
         NAME: "UCAYALI",
         IMAGE: UCAYALI,
-        DISHES: {
-          INCHICAPI_G: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "INCHICAPI DE GALLINA",
             IMAGE: INCHICAPI_GALLINA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          MAZAMORRA_P: {
+          {
+            ID: 2,
             NAME: "MAZAMORRA DE PLÁTANO",
             IMAGE: MAZAMORRA_PLATANO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          ENSALADA_C: {
+          {
+            ID: 3,
             NAME: "ENSALADA DE CHONTA",
             IMAGE: ENSALADA_CHONTA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      MADRE_DE_DIOS: {
+      {
+        ID: 3,
         NAME: "MADRE DE DIOS",
         IMAGE: MADRE_DE_DIOS,
-        DISHES: {
-          CHAPO: {
-            NAME: "CHAPO",
-            IMAGE: CHAPO,
-            DESCRIPTION: "",
-            RECIPE: "",
-          },
-          CAZUELA_P: {
+        DISHES: [
+          { ID: 1, NAME: "CHAPO", IMAGE: CHAPO, DESCRIPTION: "", RECIPE: "" },
+          {
+            ID: 2,
             NAME: "CAZUELA DE PESCADO",
             IMAGE: CAZUELA_PESCADO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          TACACHO_C: {
+          {
+            ID: 3,
             NAME: "TACACHO CON CECINA",
             IMAGE: TACACHO_CECINA_M_D,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      SAN_MARTIN: {
+      {
+        ID: 4,
         NAME: "SAN MARTIN",
         IMAGE: SAN_MARTIN,
-        DISHES: {
-          JUANE_Y: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "JUANE DE YUCA",
             IMAGE: JUANE_YUCA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          SURI_F: {
+          {
+            ID: 2,
             NAME: "SURI FRITO",
             IMAGE: SURI_FRITO,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          AVISPA_J: {
+          {
+            ID: 3,
             NAME: "AVISPA JUANE",
             IMAGE: AVISPA_JUANE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-      AMAZONAS: {
+      {
+        ID: 5,
         NAME: "AMAZONAS",
         IMAGE: AMAZONAS,
-        DISHES: {
-          CECINA_P_F: {
+        DISHES: [
+          {
+            ID: 1,
             NAME: "CECINA CON PLÁTANOS FRITOS",
             IMAGE: CECINA_PLATANOS_FRITOS,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          CALDO_C: {
+          {
+            ID: 2,
             NAME: "CALDO DE CARACHAMA",
             IMAGE: CALDO_CARACHAMA,
             DESCRIPTION: "",
             RECIPE: "",
           },
-          PURTUMUTE: {
+          {
+            ID: 3,
             NAME: "PURTUMUTE",
             IMAGE: PURTUMUTE,
             DESCRIPTION: "",
             RECIPE: "",
           },
-        },
+        ],
       },
-    },
+    ],
   },
-};
+];

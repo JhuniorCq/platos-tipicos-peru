@@ -1,4 +1,4 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { REGIONS } from "../../pages/RegionSection/utils/constants";
 import { REGIONS_NAMES } from "../../utils/constants";
 import logo from "./assets/images/logo.png";
@@ -11,15 +11,12 @@ export const Navbar = () => {
     navigate("/");
   };
 
-  const goToRegionSection = (name) => {
-    const departmentsKeys = Object.keys(REGIONS[name].DEPARTMENTS);
-    const departmentData = departmentsKeys.map((departmentKey) => ({
-      name: REGIONS[name].DEPARTMENTS[departmentKey].NAME,
-      image: REGIONS[name].DEPARTMENTS[departmentKey].IMAGE,
-    }));
+  const goToRegionSection = (regionName) => {
+    const regionData = REGIONS.find((region) => region.NAME === regionName);
+    const regionDepartments = regionData.DEPARTMENTS;
 
     navigate("/region", {
-      state: { regionName: name, regionDepartments: departmentData },
+      state: { regionName, regionDepartments },
     });
   };
 

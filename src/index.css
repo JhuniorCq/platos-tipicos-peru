@@ -1,6 +1,8 @@
 :root {
   --color-orange-brown: #cd853f;
   --color-opaque-red: #cd3f3f;
+  --color-pink-beige: #e2bc97;
+  --shadow-text-orange-brown: 0 0 10px #cd853f;
   --font-family-cabin-sketch: "Cabin Sketch", sans-serif;
   --font-family-fredericka-the-great: "Fredericka the Great", serif;
   --font-family-gabriela: "Gabriela", serif;

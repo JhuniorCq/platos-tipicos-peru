@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import { Miskito } from "../../components/Miskito/Miskito";
 import "./RegionSection.css";
-import { REGIONS } from "./utils/constants";
 
 export const RegionSection = () => {
   const {
@@ -8,11 +8,15 @@ export const RegionSection = () => {
   } = useLocation();
   const navigate = useNavigate();
 
-  const goToDepartmentSection = (name) => {
-    const dishes = REGIONS[regionName].DEPARTMENTS[name].DISHES;
+  const goToDepartmentSection = (departmentName) => {
+    const departmentData = regionDepartments.find(
+      (department) => department.NAME === departmentName
+    );
+
+    const departmentDishes = departmentData.DISHES;
 
     navigate("/department", {
-      state: { departmentName: name, departmentDishes: dishes },
+      state: { departmentName, departmentDishes },
     });
   };
 
@@ -20,22 +24,26 @@ export const RegionSection = () => {
     <section className="region">
       <h1 className="region__title">{regionName}</h1>
       <div className="region__departments">
-        {regionDepartments.map((department, index) => (
-          <div key={index} className="region__department">
+        {regionDepartments.map((department) => (
+          <div key={department.ID} className="region__department">
             <img
-              src={department.image}
-              alt="Departamento"
+              src={department.IMAGE}
+              alt={department.NAME}
               className="region__department-image"
             />
             <p
               className="region__department-name"
-              onClick={() => goToDepartmentSection(department.name)}
+              onClick={() => goToDepartmentSection(department.NAME)}
             >
-              {department.name}
+              {department.NAME}
             </p>
           </div>
         ))}
       </div>
+      <Miskito
+        positionStyle="miskito__box-position--right"
+        sizeStyle="miskito__image-size--region-section"
+      />
     </section>
   );
 };

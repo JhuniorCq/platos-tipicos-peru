@@ -1,13 +1,12 @@
-import "./HomeRegion.css";
-import miskito from "../../assets/images/miskito.png";
 import { useEffect, useState } from "react";
 import { GoTriangleLeft } from "react-icons/go";
 import { GoTriangleRight } from "react-icons/go";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { REGIONS } from "../../pages/RegionSection/utils/constants";
+import { Miskito } from "../Miskito/Miskito";
+import "./HomeRegion.css";
 
 export const HomeRegion = ({ homeRegionData }) => {
-  const [showTextMiskito, setShowTextMiskito] = useState(false);
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
 
@@ -19,15 +18,12 @@ export const HomeRegion = ({ homeRegionData }) => {
     setIndex((prev) => (prev === 0 ? homeRegionData.length - 1 : prev - 1));
   };
 
-  const goToRegionSection = (name) => {
-    const departmentsKeys = Object.keys(REGIONS[name].DEPARTMENTS);
-    const departmentData = departmentsKeys.map((departmentKey) => ({
-      name: REGIONS[name].DEPARTMENTS[departmentKey].NAME,
-      image: REGIONS[name].DEPARTMENTS[departmentKey].IMAGE,
-    }));
+  const goToRegionSection = (regionName) => {
+    const regionData = REGIONS.find((region) => region.NAME === regionName);
+    const regionDepartments = regionData.DEPARTMENTS;
 
     navigate("/region", {
-      state: { regionName: name, regionDepartments: departmentData },
+      state: { regionName, regionDepartments },
     });
   };
 
@@ -70,22 +66,10 @@ export const HomeRegion = ({ homeRegionData }) => {
           onClick={nextPlate}
         />
       </div>
-      <div className="home-region__miskito-box">
-        <img
-          src={miskito}
-          alt="Miskito"
-          className="home-region__miskito"
-          onMouseEnter={() => setShowTextMiskito(true)}
-          onMouseLeave={() => setShowTextMiskito(false)}
-        />
-        <p
-          className={`home-region__miskito-text ${
-            showTextMiskito ? "home-region__miskito-text--show" : ""
-          }`}
-        >
-          PREGÚNTALE A MISKITO
-        </p>
-      </div>
+      <Miskito
+        positionStyle="miskito__box-position--left"
+        sizeStyle="miskito__image-size--home-region"
+      />
       <div className="home-region__circle"></div>
     </section>
   );

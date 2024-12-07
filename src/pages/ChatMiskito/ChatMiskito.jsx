@@ -1,6 +1,6 @@
 import miskito from "../../assets/images/miskito.png";
 import { IoSend } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { askMiskito } from "../../utils/geminiIA";
 import { ThreeDotLoader } from "../../components/ThreeDotLoader/ThreeDotLoader";
 import ReactMarkdown from "react-markdown";
@@ -15,6 +15,7 @@ export const ChatMiskito = () => {
     error: null,
   });
   const [chatWithMiskito, setChatWithMiskito] = useState([]);
+  const chatEndRef = useRef(null);
 
   const handleInput = ({ target }) => {
     const { value } = target;
@@ -54,6 +55,14 @@ export const ChatMiskito = () => {
     return response;
   };
 
+  const scrollToLastMessage = () => {
+    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToLastMessage();
+  }, [chatWithMiskito]);
+
   return (
     <form className="chat-miskito" onSubmit={sendMessageMiskito}>
       <div
@@ -75,25 +84,22 @@ export const ChatMiskito = () => {
             showChat ? "chat-miskito__chat--show" : ""
           }`}
         >
-          {chatWithMiskito.map((conversation) => (
-            <>
+          {chatWithMiskito.map((conversation, index) => (
+            <div key={index} className="chat-miskito__conversation">
               <p className="chat-miskito__message chat-miskito__message--user">
                 {conversation.userMessage}
               </p>
               <ReactMarkdown className="chat-miskito__message chat-miskito__message--miskito">
                 {conversation.responseMiskito}
               </ReactMarkdown>
-            </>
+            </div>
           ))}
-          <p
-            className={
-              responseMiskito.loading
-                ? "chat-miskito__loading-message--show"
-                : "chat-miskito__loading-message"
-            }
-          >
-            <ThreeDotLoader />
-          </p>
+          {responseMiskito.loading && (
+            <div className="chat-miskito__message chat-miskito__message--miskito">
+              <ThreeDotLoader />
+            </div>
+          )}
+          <div ref={chatEndRef} />
         </div>
       </div>
       <div className="chat-miskito__input-box">

@@ -68,6 +68,12 @@
   transform: translateX(0);
 }
 
+.chat-miskito__conversation {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .chat-miskito__message {
   padding: 15px;
   border-radius: 8px;
@@ -88,13 +94,13 @@
   padding-left: 40px;
 }
 
-.chat-miskito__loading-message {
+/* .chat-miskito__loading-message {
   display: none;
 }
 
 .chat-miskito__loading-message--show {
   display: block;
-}
+} */
 
 .chat-miskito__input-box {
   width: 60%;

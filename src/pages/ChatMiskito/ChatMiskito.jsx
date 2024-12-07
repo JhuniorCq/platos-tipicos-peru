@@ -8,7 +8,6 @@ import "./ChatMiskito.css";
 
 export const ChatMiskito = () => {
   const [showChat, setShowChat] = useState(false);
-  const [input, setInput] = useState("");
   const [userMessage, setUserMessage] = useState("");
   const [responseMiskito, setResponseMiskito] = useState({
     message: "",
@@ -19,19 +18,18 @@ export const ChatMiskito = () => {
 
   const handleInput = ({ target }) => {
     const { value } = target;
-    setInput(value);
+    setUserMessage(value);
   };
 
   const sendMessageMiskito = async (event) => {
     event.preventDefault();
 
-    if (!input) return;
+    if (!userMessage) return;
 
     setShowChat(true);
-    // setUserMessage(input);
     setResponseMiskito({ ...responseMiskito, loading: true });
 
-    const response = await getResponseMiskito(input);
+    const response = await getResponseMiskito(userMessage);
 
     setResponseMiskito({
       message: response,
@@ -39,8 +37,8 @@ export const ChatMiskito = () => {
       error: null,
     });
 
-    addMessageToChat(input, response);
-    setInput("");
+    addMessageToChat(userMessage, response);
+    setUserMessage("");
   };
 
   const addMessageToChat = (userMessage, responseMiskito) => {
@@ -96,12 +94,6 @@ export const ChatMiskito = () => {
           >
             <ThreeDotLoader />
           </p>
-          {/* <p className="chat-miskito__message chat-miskito__message--user">
-            {userMessage}
-          </p>
-          <p className="chat-miskito__message chat-miskito__message--miskito">
-            {responseMiskito.loading ? "..." : responseMiskito.message}
-          </p> */}
         </div>
       </div>
       <div className="chat-miskito__input-box">
@@ -110,7 +102,7 @@ export const ChatMiskito = () => {
           placeholder="Hazle una pregunta a Miskito"
           className="chat-miskito__input"
           onChange={handleInput}
-          value={input}
+          value={userMessage}
         />
         <button
           className="chat-miskito__send-button"

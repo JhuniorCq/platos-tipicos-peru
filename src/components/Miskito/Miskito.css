@@ -5,15 +5,17 @@
   display: flex;
   align-items: center;
   user-select: none;
+  /* bottom: 60px; */
+  bottom: 5vh;
+  z-index: 2;
 }
 
 /* Posiciones de la Caja para Miskito */
-.miskito__box-position--left {
-  bottom: 60px;
-}
+/* .miskito__box-position--left {
+  left: auto;
+} */
 
 .miskito__box-position--right {
-  bottom: 60px;
   right: 30px;
   flex-direction: row-reverse;
 }

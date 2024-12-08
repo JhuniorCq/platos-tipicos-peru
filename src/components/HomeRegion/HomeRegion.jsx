@@ -4,9 +4,11 @@ import { GoTriangleRight } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import { REGIONS } from "../../pages/RegionSection/utils/constants";
 import { Miskito } from "../Miskito/Miskito";
-import "./HomeRegion.css";
+import "./HomeRegions.css";
+import { MdOutlineArrowBackIos } from "react-icons/md";
+import { MdOutlineArrowForwardIos } from "react-icons/md";
 
-export const HomeRegion = ({ homeRegionData }) => {
+export const HomeRegions = ({ homeRegionData }) => {
   const [index, setIndex] = useState(0);
   const navigate = useNavigate();
 
@@ -56,7 +58,7 @@ export const HomeRegion = ({ homeRegionData }) => {
           className="home-region__image"
         />
       </div>
-      <div className="home-region__carousel-buttons">
+      {/* <div className="home-region__carousel-buttons">
         <GoTriangleLeft
           className="home-region__carousel-button"
           onClick={previousPlate}
@@ -65,12 +67,23 @@ export const HomeRegion = ({ homeRegionData }) => {
           className="home-region__carousel-button"
           onClick={nextPlate}
         />
-      </div>
+      </div> */}
+
       <Miskito
-        positionStyle="miskito__box-position--left"
+        positionStyle="miskito__box-position--right"
         sizeStyle="miskito__image-size--home-region"
       />
       <div className="home-region__circle"></div>
+      <MdOutlineArrowBackIos
+        className="home-region__carousel-button home-region__carousel-button--left"
+        onClick={previousPlate}
+      />
+      <MdOutlineArrowForwardIos
+        className="home-region__carousel-button home-region__carousel-button--right"
+        onClick={nextPlate}
+      />
     </section>
   );
 };
+
+// TODO: HACER EL RESPONSIVE

@@ -15,6 +15,7 @@ export const ChatMiskito = () => {
     error: null,
   });
   const [chatWithMiskito, setChatWithMiskito] = useState([]);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
   const chatEndRef = useRef(null);
 
   const handleInput = ({ target }) => {
@@ -59,9 +60,28 @@ export const ChatMiskito = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  // Función para verfiicar el ancho del viewport
+  const checkViewportwidth = () => {
+    setIsSmallScreen(window.innerWidth <= 1150);
+  };
+
   useEffect(() => {
     scrollToLastMessage();
   }, [chatWithMiskito]);
+
+  // Actualiza el ancho del viewport al cargar o redimensionar
+  useEffect(() => {
+    // Verifica el ancho del viewport al montar el componente
+    checkViewportwidth();
+
+    // Este evento escucha los redimensionamientos
+    window.addEventListener("resize", checkViewportwidth);
+
+    // Limpiar el listener al desmontar el componente
+    return () => {
+      window.removeEventListener("resize", checkViewportwidth);
+    };
+  }, []);
 
   return (
     <form className="chat-miskito" onSubmit={sendMessageMiskito}>
@@ -70,7 +90,14 @@ export const ChatMiskito = () => {
           showChat ? "chat-miskito__chat-introduction--move" : ""
         }`}
       >
-        <div className={`chat-miskito__introduction `}>
+        {/* En este <div> se verifica si el ancho del viewport es < a 1150px y si ya hay mensajes en el chat */}
+        <div
+          className={
+            isSmallScreen && chatWithMiskito.length > 0
+              ? "chat-miskito__introduction--disappear"
+              : "chat-miskito__introduction"
+          }
+        >
           <p className="chat-miskito__paragraph">
             {showChat
               ? "¿Quieres descubrir el país con la gastronomía más variada del mundo? ¡Hazme tu pregunta!"

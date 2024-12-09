@@ -71,7 +71,7 @@ export const HomeRegions = ({ homeRegionData }) => {
 
       <Miskito
         positionStyle="miskito__box-position--right"
-        sizeStyle="miskito__image-size--home-region"
+        // sizeStyle="miskito__image-size--home-region"
       />
       <div className="home-region__circle"></div>
       <MdOutlineArrowBackIos

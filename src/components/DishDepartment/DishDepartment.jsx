@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./DishDepartment.css";
 
 export const DishDepartment = ({ image, name }) => {
@@ -7,12 +8,18 @@ export const DishDepartment = ({ image, name }) => {
       <h2 className="department-dish__name">{name}</h2>
       <div className="department-dish__options">
         {/* Para el CONOCE MÁS puedo usar <Link> */}
-        <button className="department-dish__option department-dish__learn-more">
+        <Link
+          to="/miskito"
+          state={{
+            ask: "",
+          }}
+          className="department-dish__option department-dish__learn-more"
+        >
           CONOCE MÁS
-        </button>
-        <button className="department-dish__option department-dish__history-ai">
+        </Link>
+        <Link className="department-dish__option department-dish__history-ai">
           CONOCE SU HISTORIA CON MISKITO
-        </button>
+        </Link>
       </div>
     </div>
   );

@@ -12,12 +12,11 @@
 
 .chat-miskito__chat-introduction {
   /* border: 1px solid red; */
-  padding-top: 75px;
   width: 100%;
-  height: 75vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   transition: justify-content 0.3s ease-in-out;
 }
 
@@ -27,15 +26,17 @@
 
 .chat-miskito__introduction {
   /* border: 1px solid blue; */
+  height: 65vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 35px;
 }
 
-/* .chat-miskito__introduction > * {
-  border: 1px solid red;
-} */
+.chat-miskito__introduction--disappear {
+  display: none;
+}
 
 .chat-miskito__paragraph {
   width: 300px;
@@ -46,7 +47,7 @@
 }
 
 .chat-miskito__image {
-  height: 400px;
+  height: 65%;
 }
 
 .chat-miskito__chat {
@@ -54,11 +55,12 @@
   width: 900px;
   max-height: 65vh;
   overflow-y: auto;
-  position: fixed;
   padding-right: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  /*  */
+  position: fixed;
   transform: translateX(250%);
   transition: position 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
@@ -94,14 +96,6 @@
   padding-left: 40px;
 }
 
-/* .chat-miskito__loading-message {
-  display: none;
-}
-
-.chat-miskito__loading-message--show {
-  display: block;
-} */
-
 .chat-miskito__input-box {
   width: 60%;
   display: flex;
@@ -135,4 +129,55 @@
 .chat-miskito__send-button-icon {
   color: var(--color-orange-brown);
   font-size: 1.5rem;
+}
+
+/* MEDIA QUERIA PARA EL HEIGHT */
+@media (max-height: 820px) {
+  .chat-miskito__paragraph {
+    width: 400px;
+    font-size: 1.75rem;
+  }
+
+  .chat-miskito__chat-introduction {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 1599px) {
+  .chat-miskito__chat-introduction {
+    gap: 50px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .chat-miskito {
+    padding: 0 60px;
+  }
+
+  .chat-miskito__image {
+    height: 55%;
+  }
+
+  .chat-miskito__input-box {
+    width: 70%;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 479px) {
+  .chat-miskito {
+    padding: 0 30px;
+  }
+
+  .chat-miskito__paragraph {
+    width: auto;
+    font-size: 1.7rem;
+  }
+
+  .chat-miskito__image {
+    height: 45%;
+  }
+
+  .chat-miskito__input-box {
+    width: 75%;
+  }
 }

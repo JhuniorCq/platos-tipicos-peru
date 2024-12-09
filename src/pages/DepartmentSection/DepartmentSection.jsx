@@ -13,7 +13,12 @@ export const DepartmentSection = () => {
       <h1 className="department__title">{departmentName}</h1>
       <div className="department__dishes">
         {departmentDishes.map((dish) => (
-          <DishDepartment key={dish.ID} image={dish.IMAGE} name={dish.NAME} />
+          <DishDepartment
+            key={dish.ID}
+            image={dish.IMAGE}
+            dishName={dish.NAME}
+            departmentName={departmentName}
+          />
         ))}
       </div>
       <Miskito

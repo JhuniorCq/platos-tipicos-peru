@@ -3,8 +3,8 @@ import { IoSend } from "react-icons/io5";
 import { useEffect, useRef, useState } from "react";
 import { askMiskito } from "../../utils/geminiIA";
 import { ThreeDotLoader } from "../../components/ThreeDotLoader/ThreeDotLoader";
-import ReactMarkdown from "react-markdown";
 import { useLocation } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
 import "./ChatMiskito.css";
 
 export const ChatMiskito = () => {
@@ -20,7 +20,6 @@ export const ChatMiskito = () => {
   const chatEndRef = useRef(null);
   const location = useLocation();
   const learnMoreMiskito = location?.state?.ask;
-  const [learnMoreMiskitoDone, setLearnMoreMiskitoDone] = useState(false);
 
   const handleInput = ({ target }) => {
     const { value } = target;
@@ -29,7 +28,7 @@ export const ChatMiskito = () => {
 
   const sendMessageMiskito = async (event) => {
     event.preventDefault();
-    console.log("Xd", userMessage);
+
     if (!userMessage) return;
 
     setShowChat(true);
@@ -69,34 +68,27 @@ export const ChatMiskito = () => {
     setIsSmallScreen(window.innerWidth <= 1150);
   };
 
-  useEffect(() => {
-    scrollToLastMessage();
-  }, [chatWithMiskito]);
-
   // Preguntar automáticamente a Miskito
   useEffect(() => {
-    if (learnMoreMiskito && !learnMoreMiskitoDone) {
+    if (learnMoreMiskito) {
       // Colocamos la pregunta automáticamente en el input
       setUserMessage(learnMoreMiskito);
-
-      // Confirmamos que ya hemos colocado la pregunta de "Conoce más" en el input
-      setLearnMoreMiskitoDone(true);
     }
   }, []);
 
   useEffect(() => {
-    if (learnMoreMiskitoDone && userMessage === learnMoreMiskito) {
-      console.log("Ya vamos a preguntar");
+    if (learnMoreMiskito && userMessage === learnMoreMiskito) {
       // Creamos un evento falso
       const fakeEvent = { preventDefault: () => {} };
 
       // Simulamos el envío de la pregunta
       sendMessageMiskito(fakeEvent);
-
-      // Confirmamos que ya realizamos la pregunta automática
-      // setLearnMoreMiskitoDone(true);
     }
   }, [userMessage]);
+
+  useEffect(() => {
+    scrollToLastMessage();
+  }, [chatWithMiskito]);
 
   // Actualiza el ancho del viewport al cargar o redimensionar
   useEffect(() => {

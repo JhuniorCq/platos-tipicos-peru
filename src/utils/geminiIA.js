@@ -35,3 +35,5 @@ export const askMiskito = async (message) => {
 
   return response.text();
 };
+
+// VER EL MANEJO DE ERRORES Y QUE EL PROMPT SEA COMO EL PROFESOR ENSEÑÓ

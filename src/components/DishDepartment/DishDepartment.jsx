@@ -32,7 +32,6 @@ export const DishDepartment = ({
       <img src={image} alt={dishName} className="department-dish__image" />
       <h2 className="department-dish__name">{dishName}</h2>
       <div className="department-dish__options">
-        {/* Para el CONOCE MÁS puedo usar <Link> */}
         <Link
           to="/miskito"
           state={{

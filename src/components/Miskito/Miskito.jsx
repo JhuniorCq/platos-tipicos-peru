@@ -12,11 +12,12 @@ export const Miskito = ({ positionStyle = "", sizeStyle = "" }) => {
   };
 
   return (
-    <div className={`miskito ${positionStyle}`} onClick={goChatMiskito}>
+    <div className={`miskito ${positionStyle}`}>
       <img
         src={miskito}
         alt="Miskito"
         className={`miskito__image ${sizeStyle}`}
+        onClick={goChatMiskito}
         onMouseEnter={() => setShowTextMiskito(true)}
         onMouseLeave={() => setShowTextMiskito(false)}
       />

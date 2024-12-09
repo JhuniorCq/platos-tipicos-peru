@@ -13,11 +13,14 @@ export const DishHistoryModal = ({
       className={`dish-history-modal ${
         knowHistory && "dish-history-modal--show "
       }`}
+      onClick={hideDishHistoryModal}
     >
-      <div className="dish-history-modal__box">
-        <h2 className="dish-history-modal__title">
-          HISTORIA DEL PLATO "{dishName}""
-        </h2>
+      {/* Con el "e.stopPropagation()" se evita que los clicks en el <div> "dish-history-modal__box" disparen el evento "onClick" de su contenedor: <div> "dish-history-modal" */}
+      <div
+        className="dish-history-modal__box"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <h2 className="dish-history-modal__title">"{dishName}""</h2>
         <div className="dish-history-modal__dish-data">
           <img
             src={disImage}

@@ -7,22 +7,34 @@
   overflow: hidden;
 }
 
-/* .department > * {
-  border: 1px solid red;
-} */
-
 .department__title {
+  width: 100%;
+  text-align: center;
   font-family: var(--font-family-fredericka-the-great);
   font-weight: 400;
   font-size: 4.5rem;
 }
 
 .department__dishes {
+  width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 50px;
 }
-/* 
-.department__dishes > * {
-  border: 1px solid green;
-} */
+
+@media (max-width: 620px) {
+  .department__title {
+    font-size: 3.8rem;
+  }
+}
+
+@media (max-width: 489px) {
+  .department {
+    padding: 50px 40px 80px;
+  }
+
+  .department__title {
+    font-size: 3.1rem;
+  }
+}

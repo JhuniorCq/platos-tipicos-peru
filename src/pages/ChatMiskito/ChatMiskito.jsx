@@ -153,7 +153,7 @@ export const ChatMiskito = () => {
       <div className="chat-miskito__input-box">
         <input
           type="text"
-          placeholder="Hazle una pregunta a Miskito"
+          placeholder="Pregúntale a Miskito :D"
           className="chat-miskito__input"
           onChange={handleInput}
           value={userMessage}

@@ -22,10 +22,9 @@
 
 .region__department {
   width: 30%;
+  min-width: 400px;
   position: relative;
   display: flex;
-  /* justify-content: center;
-  align-items: center; */
   cursor: pointer;
 }
 
@@ -48,4 +47,24 @@
 
 .region__department:hover .region__department-name {
   scale: 1.1;
+}
+
+@media (max-width: 549px) {
+  .region__department {
+    width: 100%;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 449px) {
+  .region__title {
+    font-size: 4.1rem;
+  }
+
+  .region__department-name {
+    font-size: 2.9rem;
+  }
 }

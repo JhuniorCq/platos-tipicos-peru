@@ -1,5 +1,6 @@
 .department-dish {
   width: 25%;
+  min-width: 350px;
   height: 800px;
   padding: 0 25px;
   display: flex;
@@ -12,7 +13,6 @@
 
 .department-dish__image {
   width: 100%;
-  /* filter: drop-shadow(0, 0, 10px, rgba(0, 0, 0, 0.8)); */
 }
 
 .department-dish__name {
@@ -34,7 +34,6 @@
 }
 
 .department-dish__option {
-  /* border: 1px solid yellow; */
   width: 100%;
   height: 55px;
   padding: 0 20px;
@@ -59,4 +58,31 @@
 .department-dish__history-ai {
   background-color: white;
   color: black;
+}
+
+@media (max-width: 1271px) {
+  .department-dish {
+    height: 720px;
+  }
+}
+
+@media (max-width: 489px) {
+  .department-dish {
+    min-width: 300px;
+    gap: 0;
+    height: 650px;
+  }
+
+  .department-dish__name {
+    font-size: 2.7rem;
+  }
+
+  .department-dish__options {
+    margin-top: 35px;
+  }
+
+  .department-dish__option {
+    height: 55px;
+    font-size: 1.2rem;
+  }
 }

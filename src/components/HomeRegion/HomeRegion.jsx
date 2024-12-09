@@ -58,21 +58,7 @@ export const HomeRegions = ({ homeRegionData }) => {
           className="home-region__image"
         />
       </div>
-      {/* <div className="home-region__carousel-buttons">
-        <GoTriangleLeft
-          className="home-region__carousel-button"
-          onClick={previousPlate}
-        />
-        <GoTriangleRight
-          className="home-region__carousel-button"
-          onClick={nextPlate}
-        />
-      </div> */}
-
-      <Miskito
-        positionStyle="miskito__box-position--right"
-        // sizeStyle="miskito__image-size--home-region"
-      />
+      <Miskito positionStyle="miskito__box-position--right" />
       <div className="home-region__circle"></div>
       <MdOutlineArrowBackIos
         className="home-region__carousel-button home-region__carousel-button--left"
@@ -85,5 +71,3 @@ export const HomeRegions = ({ homeRegionData }) => {
     </section>
   );
 };
-
-// TODO: HACER EL RESPONSIVE

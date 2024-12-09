@@ -1,41 +1,23 @@
 .miskito {
   width: auto;
-  /* border: 1px solid red; */
   position: fixed;
   display: flex;
   align-items: center;
   user-select: none;
-  /* bottom: 60px; */
   z-index: 2;
 }
-
-/* Posiciones de la Caja para Miskito */
-/* .miskito__box-position--left {
-  left: auto;
-} */
 
 .miskito__box-position--right {
   right: 30px;
   bottom: 5vh;
   flex-direction: row-reverse;
 }
-/* --- */
 
 .miskito__image {
   cursor: pointer;
   height: 20vh;
   transition: scale 0.35s ease-in-out;
 }
-
-/* Tamaños para la IMG de Miskito */
-/* .miskito__image-size--home-region {
-  height: 20vh;
-}
-
-.miskito__image-size--region-section {
-  height: 20vh;
-} */
-/* --- */
 
 .miskito__image:hover {
   scale: 1.15;
@@ -61,12 +43,6 @@
   transform: translateX(-5px);
 }
 
-@media (min-width: 1600px) {
-}
-@media (min-width: 1200px) and (max-width: 1599px) {
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-}
 @media (min-width: 768px) and (max-width: 991px) {
   .miskito__image {
     height: 17vh;

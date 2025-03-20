@@ -34,7 +34,7 @@ export const ChatMiskito = () => {
     setShowChat(true);
     setResponseMiskito({ ...responseMiskito, loading: true });
 
-    const response = await getResponseMiskito(userMessage);
+    const response = await askMiskito(userMessage);
 
     setResponseMiskito({
       message: response,
@@ -52,11 +52,6 @@ export const ChatMiskito = () => {
       responseMiskito,
     };
     setChatWithMiskito([...chatWithMiskito, conversation]);
-  };
-
-  const getResponseMiskito = async (message) => {
-    const response = await askMiskito(message);
-    return response;
   };
 
   const scrollToLastMessage = () => {
@@ -111,7 +106,6 @@ export const ChatMiskito = () => {
           showChat ? "chat-miskito__chat-introduction--move" : ""
         }`}
       >
-        {/* En este <div> se verifica si el ancho del viewport es < a 1150px y si ya hay mensajes en el chat */}
         <div
           className={
             isSmallScreen && chatWithMiskito.length > 0

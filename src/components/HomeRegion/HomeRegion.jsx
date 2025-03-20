@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { GoTriangleLeft } from "react-icons/go";
-import { GoTriangleRight } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 import { REGIONS } from "../../pages/RegionSection/utils/constants";
 import { Miskito } from "../Miskito/Miskito";
-import "./HomeRegions.css";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import "./HomeRegions.css";
 
 export const HomeRegions = ({ homeRegionData }) => {
   const [index, setIndex] = useState(0);

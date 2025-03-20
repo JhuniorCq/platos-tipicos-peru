@@ -1,6 +1,5 @@
-const API_KEY_GOOGLE = "AIzaSyCgNTAdrc0V8qyRTTCEffXcQt1mC_LXSiE";
-
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { API_KEY_GOOGLE } from "./constants";
 
 const genAI = new GoogleGenerativeAI(API_KEY_GOOGLE);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -32,7 +31,7 @@ const chat = model.startChat({
 export const askMiskito = async (message) => {
   try {
     const result = await chat.sendMessage(message);
-    const response = await result.response;
+    const response = result.response;
 
     return response.text();
   } catch (error) {

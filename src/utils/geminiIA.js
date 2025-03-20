@@ -31,9 +31,9 @@ const chat = model.startChat({
 export const askMiskito = async (message) => {
   try {
     const result = await chat.sendMessage(message);
-    const response = result.response;
+    const response = result.response.text();
 
-    return response.text();
+    return response;
   } catch (error) {
     console.error("Error al comunicarse con Gemini AI:", error.message);
 
